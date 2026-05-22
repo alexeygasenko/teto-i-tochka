@@ -12,7 +12,23 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="is-loading">
+    <div class="site-loader" id="site-loader" role="status" aria-live="polite" aria-label="Загрузка сайта">
+      <div class="loader-card">
+        <div class="loader-orbit" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img class="loader-teto" src="assets/teto/loader-teto.png" alt="" width="1024" height="1536" />
+        <div class="loader-copy">
+          <p>Тето разогревает сцену</p>
+          <strong>Готовим меню</strong>
+          <div class="loader-bar" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </div>
+
     <header class="site-header" aria-label="Главная навигация">
       <a class="brand-logo" href="#top" aria-label="Тето и Точка">
         <img src="assets/brand/brand-logo.png" alt="Тето & Точка." width="1851" height="849" />
