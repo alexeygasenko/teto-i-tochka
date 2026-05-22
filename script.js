@@ -4,7 +4,6 @@ const revealItems = document.querySelectorAll(".reveal");
 const parallaxItems = document.querySelectorAll(".parallax");
 const header = document.querySelector(".site-header");
 const comboList = document.querySelector(".combo-list");
-const siteLoader = document.querySelector("#site-loader");
 const modal = document.querySelector("#dish-modal");
 const modalImage = modal?.querySelector(".modal-image");
 const modalType = modal?.querySelector(".modal-type");
@@ -204,23 +203,6 @@ const syncHeader = () => {
 
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
-
-const hideSiteLoader = () => {
-  if (!siteLoader) return;
-
-  document.body.classList.remove("is-loading");
-  siteLoader.classList.add("is-hidden");
-
-  window.setTimeout(() => {
-    siteLoader.setAttribute("hidden", "");
-  }, 560);
-};
-
-if (document.readyState === "complete") {
-  hideSiteLoader();
-} else {
-  window.addEventListener("load", hideSiteLoader, { once: true });
-}
 
 const syncComboFade = () => {
   if (!comboList) return;
