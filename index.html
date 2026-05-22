@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Тето и Точка - грушевая поп-кухня с бургерами, снеками, десертами, кофе и коктейлями."
+    />
+    <meta name="theme-color" content="#f14562" />
+    <title>Тето и Точка - грушевая поп-кухня</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Главная навигация">
+      <a class="brand-logo" href="#top" aria-label="Тето и Точка">
+        <img src="assets/brand/brand-logo.png" alt="Тето & Точка." width="1851" height="849" />
+      </a>
+      <nav class="nav-links" aria-label="Разделы">
+        <a href="#story">Идея</a>
+        <a href="#menu">Меню</a>
+        <a href="#combo">Комбо</a>
+        <a href="#visit">Адрес</a>
+      </nav>
+      <a class="header-link" href="#menu">Выбрать вкус</a>
+    </header>
+
+    <main id="top">
+      <section class="hero split-section">
+        <div class="section-copy reveal">
+          <p class="kicker">Pear pop fast food</p>
+          <h1>Груша стала главным героем фастфуда.</h1>
+          <p>
+            Тето ведет кухню, а груша добавляет каждому блюду сладкий удар:
+            бургеры, снеки, кофе, коктейли и десерты без скучного фона.
+          </p>
+          <div class="actions">
+            <a class="primary-action" href="#menu">Открыть меню</a>
+            <a class="secondary-action" href="#combo">Собрать комбо</a>
+          </div>
+        </div>
+
+        <div class="teto-panel hero-panel reveal" aria-label="Тето с фирменным бургером">
+          <img class="teto-art" src="assets/teto/hero-teto.png" alt="" />
+          <img class="panel-food food-burger" src="assets/menu/burger.png" alt="" />
+          <img class="panel-food food-shake" src="assets/menu/pear-milkshake.png" alt="" />
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Особенности">
+        <div>
+          <span>грушевая котлета</span>
+          <span>хрустящие ломтики</span>
+          <span>дюшес</span>
+          <span>раф с грушей</span>
+          <span>ягодные милкшейки</span>
+          <span>сыр и бекон</span>
+          <span>грушевая котлета</span>
+          <span>хрустящие ломтики</span>
+        </div>
+      </section>
+
+      <section class="story split-section flip" id="story">
+        <div class="teto-panel story-panel reveal" aria-label="Тето показывает фирменные позиции">
+          <img class="teto-art" src="assets/teto/story-teto.png" alt="" />
+          <img class="panel-food food-gyros" src="assets/menu/gyros.png" alt="" />
+          <img class="panel-food food-raf" src="assets/menu/pear-raf.png" alt="" />
+        </div>
+
+        <div class="section-copy reveal">
+          <p class="kicker">Почему сеть</p>
+          <h2>Тето открыла фастфуд, потому что груше стало тесно в десертах.</h2>
+          <p>
+            Она начинала с домашнего дюшеса и пирога на маленькой кухне, а потом
+            поняла: груша может быть в бургере, кофе, снеках и горячем обеде.
+            Так появилась сеть, где быстрый заказ все равно звучит авторски.
+          </p>
+          <div class="stat-row" aria-label="Преимущества">
+            <div><strong>26</strong><span>позиций</span></div>
+            <div><strong>6</strong><span>категорий</span></div>
+            <div><strong>1</strong><span>грушевая идея</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-head reveal">
+          <p class="kicker">Меню</p>
+          <h2 id="menu-title">Все, что Тето ставит на поднос.</h2>
+        </div>
+
+        <div class="filter-bar reveal" aria-label="Фильтр меню">
+          <button class="filter-button active" type="button" data-filter="all">Все</button>
+          <button class="filter-button" type="button" data-filter="main">Основное</button>
+          <button class="filter-button" type="button" data-filter="snack">Снеки</button>
+          <button class="filter-button" type="button" data-filter="dessert">Десерты</button>
+          <button class="filter-button" type="button" data-filter="drink">Напитки</button>
+          <button class="filter-button" type="button" data-filter="coffee">Кофе</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/burger.png" alt="Бургер с грушевой котлетой" loading="lazy" />
+            <div>
+              <p class="item-type">бургер</p>
+              <h3>Бургер с грушевой котлетой</h3>
+              <p>Грушевая котлета, листья салата и грушево-горчичный соус.</p>
+              <span>349 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="dessert">
+            <img src="assets/menu/baked-pear.png" alt="Грушевые запеченные ломтики" loading="lazy" />
+            <div>
+              <p class="item-type">теплый десерт</p>
+              <h3>Грушевые запеченные ломтики</h3>
+              <p>Груша, мед и корица на теплой керамической тарелке.</p>
+              <span>219 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="dessert">
+            <img src="assets/menu/pear-icecream.png" alt="Грушевое мороженое" loading="lazy" />
+            <div>
+              <p class="item-type">мороженое</p>
+              <h3>Грушевое мороженое</h3>
+              <p>Груша, сливки и ваниль в нежном пломбирном шарике.</p>
+              <span>239 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/sandwich.png" alt="Сэндвич с грушей, сыром и беконом" loading="lazy" />
+            <div>
+              <p class="item-type">сэндвич</p>
+              <h3>Сэндвич с грушей, сыром и беконом</h3>
+              <p>Хлеб, груша, расплавленный сыр и хрустящий бекон.</p>
+              <span>329 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="snack">
+            <img src="assets/menu/pear-potato.png" alt="Жареная картошка с грушей" loading="lazy" />
+            <div>
+              <p class="item-type">гарнир</p>
+              <h3>Жареная картошка с грушей</h3>
+              <p>Картофель, груша, масло и специи с травяным акцентом.</p>
+              <span>199 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="snack">
+            <img src="assets/menu/breaded-pear.png" alt="Грушевые ломтики в панировке" loading="lazy" />
+            <div>
+              <p class="item-type">хрустящий снек</p>
+              <h3>Грушевые ломтики в панировке</h3>
+              <p>Груша, панировочные сухари, яйцо и масло.</p>
+              <span>229 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/gyros.png" alt="Гирос с говядиной и грушей" loading="lazy" />
+            <div>
+              <p class="item-type">гирос</p>
+              <h3>Гирос с говядиной и грушей</h3>
+              <p>Говядина, груша, листья салата, лук и грушево-сметанный соус.</p>
+              <span>379 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/sausage-pear.png" alt="Запеченная груша с охотничьими сосисками" loading="lazy" />
+            <div>
+              <p class="item-type">сковородка</p>
+              <h3>Запеченная груша с охотничьими сосисками</h3>
+              <p>Груша, охотничьи сосиски и грушево-горчичный соус.</p>
+              <span>299 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="drink" id="drinks">
+            <img src="assets/menu/pear-milkshake.png" alt="Грушевый молочный коктейль" loading="lazy" />
+            <div>
+              <p class="item-type">милкшейк</p>
+              <h3>Грушевый молочный коктейль</h3>
+              <p>Сливочный коктейль, грушевая база, взбитые сливки и ломтик груши.</p>
+              <span>249 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="drink">
+            <img src="assets/menu/pear-raspberry-milkshake.png" alt="Молочный коктейль с грушей и малиной" loading="lazy" />
+            <div>
+              <p class="item-type">милкшейк</p>
+              <h3>Молочный коктейль с грушей и малиной</h3>
+              <p>Грушевая сливочность, малиновая волна и ягодный верх.</p>
+              <span>279 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="drink">
+            <img src="assets/menu/pear-currant-milkshake.png" alt="Грушевый молочный коктейль со смородиной" loading="lazy" />
+            <div>
+              <p class="item-type">милкшейк</p>
+              <h3>Грушевый молочный коктейль со смородиной</h3>
+              <p>Нежная груша, черная смородина и плотная молочная пена.</p>
+              <span>279 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="coffee">
+            <img src="assets/menu/pear-latte.png" alt="Грушевый латте" loading="lazy" />
+            <div>
+              <p class="item-type">кофе</p>
+              <h3>Грушевый латте</h3>
+              <p>Эспрессо, молоко, грушевый сироп и мягкая молочная текстура.</p>
+              <span>229 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="coffee">
+            <img src="assets/menu/pear-raf.png" alt="Грушевый раф" loading="lazy" />
+            <div>
+              <p class="item-type">кофе</p>
+              <h3>Грушевый раф</h3>
+              <p>Сливочный раф с грушевым сиропом и ванильной сахарной пудрой.</p>
+              <span>249 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="coffee">
+            <img src="assets/menu/pear-cappuccino.png" alt="Грушевый капучино" loading="lazy" />
+            <div>
+              <p class="item-type">кофе</p>
+              <h3>Грушевый капучино</h3>
+              <p>Плотная молочная пена, эспрессо и легкая грушевая сладость.</p>
+              <span>219 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="drink">
+            <img src="assets/menu/duchess.png" alt="Дюшес" loading="lazy" />
+            <div>
+              <p class="item-type">газировка</p>
+              <h3>Дюшес</h3>
+              <p>Игристый грушевый лимонад со льдом, мятой и свежей грушей.</p>
+              <span>179 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="drink">
+            <img src="assets/menu/pear-juice.png" alt="Грушевый сок" loading="lazy" />
+            <div>
+              <p class="item-type">сок</p>
+              <h3>Грушевый сок</h3>
+              <p>Холодный сок из спелой груши без лишней суеты.</p>
+              <span>169 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/salad-pear-cheese-nuts.png" alt="Салат с грушей, сыром и орехами" loading="lazy" />
+            <div>
+              <p class="item-type">салат</p>
+              <h3>Салат с грушей, сыром и орехами</h3>
+              <p>Хрустящая зелень, груша, выдержанный сыр и обжаренные орехи.</p>
+              <span>319 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/warm-liver-pear-salad.png" alt="Горячий салат с грушей и куриной печенью" loading="lazy" />
+            <div>
+              <p class="item-type">теплый салат</p>
+              <h3>Горячий салат с грушей и куриной печенью</h3>
+              <p>Куриная печень, карамельная груша, зелень и теплый грушевый соус.</p>
+              <span>389 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/pear-mustard-meatballs.png" alt="Фрикадельки в грушево-горчичном соусе" loading="lazy" />
+            <div>
+              <p class="item-type">горячее</p>
+              <h3>Фрикадельки в грушево-горчичном соусе</h3>
+              <p>Мясные фрикадельки в густом соусе с грушей и зернистой горчицей.</p>
+              <span>369 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/pear-duck-chicken.png" alt="Груша с уткой или курицей" loading="lazy" />
+            <div>
+              <p class="item-type">птица</p>
+              <h3>Груша с уткой или курицей</h3>
+              <p>Запеченная груша, сочная птица, травы и глянцевый фруктовый соус.</p>
+              <span>429 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/pear-brie-risotto.png" alt="Ризотто с грушей и сыром бри" loading="lazy" />
+            <div>
+              <p class="item-type">ризотто</p>
+              <h3>Ризотто с грушей и сыром бри</h3>
+              <p>Кремовый рис, мягкий бри, груша и легкая ореховая посыпка.</p>
+              <span>399 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/pear-chicken-quesadilla.png" alt="Кесадилья с грушей, курицей и сыром" loading="lazy" />
+            <div>
+              <p class="item-type">кесадилья</p>
+              <h3>Кесадилья с грушей, курицей и сыром</h3>
+              <p>Тортилья, курица, расплавленный сыр, груша и сливочный дип.</p>
+              <span>349 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/pear-gorgonzola-pasta.png" alt="Паста с грушей, горгонзолой и орехами" loading="lazy" />
+            <div>
+              <p class="item-type">паста</p>
+              <h3>Паста с грушей, горгонзолой и орехами</h3>
+              <p>Паста в сырном соусе с грушей, горгонзолой и дроблеными орехами.</p>
+              <span>379 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="dessert">
+            <img src="assets/menu/pear-charlotte.png" alt="Грушевая шарлотка" loading="lazy" />
+            <div>
+              <p class="item-type">выпечка</p>
+              <h3>Грушевая шарлотка</h3>
+              <p>Воздушный пирог с кусочками груши, корицей и сахарной пудрой.</p>
+              <span>249 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="dessert">
+            <img src="assets/menu/pear-almond-pie.png" alt="Грушевый пирог с миндалем" loading="lazy" />
+            <div>
+              <p class="item-type">пирог</p>
+              <h3>Грушевый пирог с миндалем</h3>
+              <p>Тонкое тесто, запеченная груша, миндальные лепестки и нежный крем.</p>
+              <span>279 ₽</span>
+            </div>
+          </article>
+          <article class="menu-card reveal" data-category="main">
+            <img src="assets/menu/stuffed-pears-meat.png" alt="Груши, фаршированные мясом" loading="lazy" />
+            <div>
+              <p class="item-type">горячее</p>
+              <h3>Груши, фаршированные мясом</h3>
+              <p>Запеченные груши с мясной начинкой, травами и плотным соусом.</p>
+              <span>389 ₽</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="combo split-section" id="combo">
+        <div class="section-copy reveal">
+          <p class="kicker">Комбо смены</p>
+          <h2>Тето собрала сеты под разные настроения.</h2>
+          <p>
+            Быстрые наборы для тех, кто хочет сразу полный припев: горячее,
+            что-то хрустящее, напиток и грушевый акцент в каждом вкусе.
+          </p>
+          <div class="combo-list">
+            <div><span>01</span><strong>Бургер + ломтики + дюшес</strong><small>от 599 ₽</small></div>
+            <div><span>02</span><strong>Гирос + картошка + латте</strong><small>от 649 ₽</small></div>
+            <div><span>03</span><strong>Сэндвич + мороженое + раф</strong><small>от 629 ₽</small></div>
+            <div><span>04</span><strong>Кесадилья + панированная груша + сок</strong><small>от 679 ₽</small></div>
+            <div><span>05</span><strong>Паста с горгонзолой + салат + капучино</strong><small>от 749 ₽</small></div>
+            <div><span>06</span><strong>Фрикадельки + печеные ломтики + милкшейк</strong><small>от 699 ₽</small></div>
+            <div><span>07</span><strong>Ризотто с бри + шарлотка + грушевый раф</strong><small>от 789 ₽</small></div>
+            <div><span>08</span><strong>Фаршированные груши + дюшес + миндальный пирог</strong><small>от 829 ₽</small></div>
+          </div>
+        </div>
+
+        <div class="teto-panel combo-panel reveal" aria-label="Тето с комбо">
+          <img class="teto-art" src="assets/teto/combo-teto.png" alt="" />
+          <img class="panel-food food-potato" src="assets/menu/pear-potato.png" alt="" />
+          <img class="panel-food food-duchess" src="assets/menu/duchess.png" alt="" />
+        </div>
+      </section>
+
+      <section class="visit split-section flip" id="visit">
+        <div class="teto-panel visit-panel reveal" aria-label="Тето встречает гостей">
+          <img class="teto-art" src="assets/teto/visit-teto.png" alt="" />
+          <img class="panel-food food-dessert" src="assets/menu/pear-charlotte.png" alt="" />
+        </div>
+
+        <div class="section-copy reveal">
+          <p class="kicker">Заглядывай</p>
+          <h2>Фруктовая, 39. Каждый день с 10:00 до 22:00.</h2>
+          <p>
+            Готовим на месте, отдаем быстро. Тето встречает гостей, а витрина
+            держит десерты, кофе и горячие позиции.
+          </p>
+          <a class="primary-action" href="#menu">Выбрать вкус</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <strong>Тето & Точка.</strong>
+        <p>
+          Грушевый фастфуд от Тето: горячее, напитки и десерты с бодрым вайбом
+          сцены, где каждый заказ звучит как припев.
+        </p>
+      </div>
+
+      <nav class="footer-block" aria-label="Нижняя навигация">
+        <h2>Разделы</h2>
+        <a href="#idea">Идея</a>
+        <a href="#menu">Меню</a>
+        <a href="#combo">Комбо</a>
+        <a href="#visit">Адрес</a>
+      </nav>
+
+      <div class="footer-block">
+        <h2>Где и когда</h2>
+        <p>Фруктовая, 39</p>
+        <p>Каждый день: 10:00-22:00</p>
+        <p>Самовывоз и быстрые заказы у стойки</p>
+      </div>
+
+      <div class="footer-block">
+        <h2>Связь</h2>
+        <a href="tel:+73430000039">+7 343 000-00-39</a>
+        <a href="mailto:hello@teto-tochka.test">hello@teto-tochka.test</a>
+        <p>@teto.tochka</p>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Груша, музыка, хруст.</span>
+        <span>Сезонное меню обновляется каждую пятницу.</span>
+        <a href="#top">Наверх</a>
+      </div>
+    </footer>
+
+    <div class="dish-modal" id="dish-modal" aria-hidden="true">
+      <button class="modal-backdrop" type="button" aria-label="Закрыть просмотр"></button>
+      <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Закрыть просмотр">×</button>
+        <img class="modal-image" src="" alt="" />
+        <div class="modal-content">
+          <p class="modal-type"></p>
+          <h2 id="modal-title"></h2>
+          <p class="modal-description"></p>
+          <dl class="modal-facts">
+            <div>
+              <dt>Вес</dt>
+              <dd class="modal-weight"></dd>
+            </div>
+            <div>
+              <dt>Калории</dt>
+              <dd class="modal-calories"></dd>
+            </div>
+          </dl>
+          <span class="modal-price"></span>
+        </div>
+      </article>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
