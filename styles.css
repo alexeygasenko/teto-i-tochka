@@ -1044,69 +1044,163 @@ body.modal-open {
 @media (max-width: 640px) {
   .site-header {
     width: calc(100% - 20px);
+    top: 8px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand action"
+      "nav nav";
     gap: 8px 10px;
-    padding: 10px;
-    border-radius: 24px;
+    min-height: 0;
+    padding: 8px 10px 12px;
+    border-radius: 22px;
+  }
+
+  .site-header::after {
+    left: 12px;
+    right: 12px;
+    bottom: 6px;
+    height: 3px;
+  }
+
+  .brand-logo {
+    justify-self: start;
   }
 
   .brand-logo img {
-    width: min(300px, 86vw);
+    width: min(205px, 54vw);
     height: auto;
   }
 
   .nav-links {
-    gap: 4px;
-    padding: 6px;
-    font-size: 0.82rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 6px;
+    width: 100%;
+    padding: 4px 0 2px;
+    font-size: 0.76rem;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-links a {
-    min-height: 34px;
-    padding: 0 10px;
+    flex: 0 0 auto;
+    min-height: 32px;
+    padding: 0 12px;
+    border: 1px solid rgba(20, 61, 27, 0.12);
+    background: rgba(255, 248, 232, 0.62);
   }
 
   .header-link {
-    justify-self: center;
-    min-height: 38px;
-    padding: 0 12px;
-    font-size: 0.76rem;
+    justify-self: end;
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 0.66rem;
   }
 
   main {
-    padding-top: 14px;
+    padding-top: 6px;
   }
 
   .split-section,
   .menu-section {
-    padding-inline: 14px;
+    padding: 44px 14px;
+    scroll-margin-top: 190px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 36px;
+  }
+
+  .split-section {
+    gap: 22px;
+  }
+
+  .story .section-copy,
+  .visit .section-copy {
+    order: 1;
+  }
+
+  .story .teto-panel,
+  .visit .teto-panel {
+    order: 2;
   }
 
   h1 {
-    font-size: clamp(3.9rem, 21vw, 6.3rem);
+    font-size: clamp(3.05rem, 16vw, 4.1rem);
+    line-height: 0.98;
+    text-shadow: 4px 4px 0 rgba(244, 201, 79, 0.5);
   }
 
   h2 {
-    font-size: clamp(2.55rem, 13vw, 4.4rem);
+    font-size: clamp(2.2rem, 11vw, 3.35rem);
+    line-height: 1.02;
+  }
+
+  .kicker {
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .section-copy > p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .actions {
+    gap: 10px;
+    margin-top: 18px;
   }
 
   .actions a,
   .visit .primary-action {
     width: 100%;
+    min-height: 44px;
   }
 
   .teto-panel {
-    min-height: 420px;
-    border-radius: 22px;
+    height: clamp(330px, 92vw, 390px);
+    min-height: 0;
+    border-width: 2px;
+    border-radius: 24px;
   }
 
   .teto-art {
-    width: 96%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-position: center bottom;
   }
 
   .panel-food {
-    width: 118px;
+    width: clamp(96px, 32vw, 126px);
     border-width: 5px;
     border-radius: 16px;
+  }
+
+  .food-burger,
+  .food-gyros,
+  .food-potato {
+    top: 6%;
+    right: 5%;
+    left: auto;
+  }
+
+  .food-shake,
+  .food-raf,
+  .food-duchess {
+    bottom: 6%;
+    left: 5%;
+    right: auto;
+  }
+
+  .food-dessert {
+    top: 6%;
+    left: 5%;
   }
 
   .stat-row,
@@ -1115,30 +1209,123 @@ body.modal-open {
   }
 
   .filter-bar {
-    top: 118px;
-    border-radius: 24px;
+    top: 174px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 18px 0 20px;
+    padding: 8px;
+    border-radius: 18px;
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-button {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 0 13px;
+    font-size: 0.76rem;
   }
 
   .menu-card {
-    grid-template-rows: auto 1fr;
+    grid-template-columns: minmax(122px, 42%) 1fr;
+    grid-template-rows: 1fr;
     min-height: auto;
+    border-radius: 18px;
+  }
+
+  .menu-card:hover {
+    transform: none;
+  }
+
+  .menu-card img {
+    height: 100%;
+    min-height: 210px;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .menu-card div {
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .menu-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.08;
+  }
+
+  .menu-card p:not(.item-type) {
+    font-size: 0.86rem;
+    line-height: 1.32;
+  }
+
+  .menu-card span {
+    font-size: 1.15rem;
   }
 
   .modal-card {
     grid-template-columns: 1fr;
+    gap: 0;
+    width: calc(100vw - 20px);
+    max-height: calc(100svh - 20px);
+    border-radius: 22px;
     overflow: auto;
   }
 
   .modal-image {
-    max-height: 52svh;
+    width: 100%;
+    max-height: 44svh;
+    aspect-ratio: 1.05;
+  }
+
+  .modal-content {
+    padding: 18px;
+  }
+
+  .modal-card h2 {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
+    line-height: 1.02;
+  }
+
+  .modal-facts {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .modal-price {
+    margin-top: 16px;
+    font-size: 2.2rem;
+  }
+
+  .combo-list {
+    max-height: 320px;
+    margin-top: 20px;
   }
 
   .combo-list div {
     grid-template-columns: auto 1fr;
+    gap: 10px 12px;
+    padding: 12px;
   }
 
   .combo-list small {
     grid-column: 2;
+  }
+
+  .combo-list span {
+    width: 38px;
+    height: 38px;
+    font-size: 0.78rem;
+  }
+
+  .combo-list strong {
+    font-size: 0.98rem;
+    line-height: 1.18;
   }
 
   .site-footer {
@@ -1155,6 +1342,50 @@ body.modal-open {
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header {
+    gap: 6px 8px;
+    padding-inline: 8px;
+  }
+
+  .brand-logo img {
+    width: min(158px, 50vw);
+  }
+
+  .header-link {
+    min-height: 32px;
+    padding: 0 9px;
+    font-size: 0.6rem;
+  }
+
+  .nav-links {
+    gap: 4px;
+    font-size: 0.7rem;
+  }
+
+  .nav-links a {
+    min-height: 30px;
+    padding: 0 9px;
+  }
+
+  .split-section,
+  .menu-section {
+    scroll-margin-top: 210px;
+  }
+
+  .filter-bar {
+    top: 198px;
+  }
+
+  h1 {
+    font-size: clamp(2.85rem, 15.5vw, 3.45rem);
+  }
+
+  .menu-card {
+    grid-template-columns: 118px 1fr;
   }
 }
 
