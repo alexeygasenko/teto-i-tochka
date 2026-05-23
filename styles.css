@@ -1153,6 +1153,23 @@ body.modal-open {
     line-height: 1.02;
   }
 
+  .visit-title {
+    max-width: 980px;
+    font-size: clamp(2.2rem, 11vw, 3.35rem);
+    line-height: 1.02;
+  }
+
+  .visit-title span {
+    display: inline;
+    width: auto;
+    max-width: none;
+    white-space: normal;
+  }
+
+  .visit-title span:not(:last-child)::after {
+    content: "";
+  }
+
   .kicker {
     margin-bottom: 10px;
     font-size: 0.72rem;
