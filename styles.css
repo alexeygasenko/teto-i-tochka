@@ -268,6 +268,19 @@ main {
   background: linear-gradient(135deg, rgba(255, 248, 232, 0.9), rgba(255, 194, 174, 0.72));
 }
 
+.visit-title span {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.visit-title {
+  max-width: none;
+  font-size: clamp(3rem, 4.6vw, 5.8rem);
+  line-height: 1.02;
+}
+
 .section-copy {
   min-width: 0;
 }
@@ -1177,30 +1190,7 @@ body.modal-open {
   }
 
   .panel-food {
-    width: clamp(96px, 32vw, 126px);
-    border-width: 5px;
-    border-radius: 16px;
-  }
-
-  .food-burger,
-  .food-gyros,
-  .food-potato {
-    top: 6%;
-    right: 5%;
-    left: auto;
-  }
-
-  .food-shake,
-  .food-raf,
-  .food-duchess {
-    bottom: 6%;
-    left: 5%;
-    right: auto;
-  }
-
-  .food-dessert {
-    top: 6%;
-    left: 5%;
+    display: none;
   }
 
   .stat-row,
@@ -1209,11 +1199,12 @@ body.modal-open {
   }
 
   .filter-bar {
+    position: static;
     top: 174px;
     overflow-x: auto;
     justify-content: flex-start;
     gap: 8px;
-    margin: 18px 0 20px;
+    margin: 18px 0 28px;
     padding: 8px;
     border-radius: 18px;
     scrollbar-width: none;
@@ -1377,6 +1368,7 @@ body.modal-open {
   }
 
   .filter-bar {
+    position: static;
     top: 198px;
   }
 

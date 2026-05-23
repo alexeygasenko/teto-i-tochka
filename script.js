@@ -1,5 +1,6 @@
 const filterButtons = document.querySelectorAll(".filter-button");
 const cards = document.querySelectorAll(".menu-card");
+const menuGrid = document.querySelector(".menu-grid");
 const revealItems = document.querySelectorAll(".reveal");
 const parallaxItems = document.querySelectorAll(".parallax");
 const header = document.querySelector(".site-header");
@@ -98,13 +99,63 @@ const dishTasteNotes = {
     "Неожиданный гастро-соло: сладкая запеченная груша держит форму, мясная начинка дает плотность, травы добавляют зеленый ритм.",
 };
 
+const allMenuOrder = [
+  "Бургер с грушевой котлетой",
+  "Сэндвич с грушей, сыром и беконом",
+  "Гирос с говядиной и грушей",
+  "Кесадилья с грушей, курицей и сыром",
+  "Запеченная груша с охотничьими сосисками",
+  "Фрикадельки в грушево-горчичном соусе",
+  "Груша с уткой или курицей",
+  "Груши, фаршированные мясом",
+  "Салат с грушей, сыром и орехами",
+  "Горячий салат с грушей и куриной печенью",
+  "Ризотто с грушей и сыром бри",
+  "Паста с грушей, горгонзолой и орехами",
+  "Жареная картошка с грушей",
+  "Грушевые ломтики в панировке",
+  "Грушевый молочный коктейль",
+  "Молочный коктейль с грушей и малиной",
+  "Грушевый молочный коктейль со смородиной",
+  "Дюшес",
+  "Грушевый сок",
+  "Грушевый латте",
+  "Грушевый раф",
+  "Грушевый капучино",
+  "Грушевые запеченные ломтики",
+  "Грушевое мороженое",
+  "Грушевая шарлотка",
+  "Грушевый пирог с миндалем",
+];
+
+const sortedCards = [...cards].sort((left, right) => {
+  const leftTitle = left.querySelector("h3")?.textContent || "";
+  const rightTitle = right.querySelector("h3")?.textContent || "";
+  const leftIndex = allMenuOrder.indexOf(leftTitle);
+  const rightIndex = allMenuOrder.indexOf(rightTitle);
+
+  return (leftIndex === -1 ? 999 : leftIndex) - (rightIndex === -1 ? 999 : rightIndex);
+});
+
+const sortMenuForAll = () => {
+  if (!menuGrid) return;
+
+  sortedCards.forEach((card) => menuGrid.appendChild(card));
+};
+
 revealItems.forEach((item, index) => {
   item.style.setProperty("--stagger", `${Math.min(index % 6, 5) * 70}ms`);
 });
 
+sortMenuForAll();
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
+
+    if (filter === "all") {
+      sortMenuForAll();
+    }
 
     filterButtons.forEach((item) => item.classList.toggle("active", item === button));
     cards.forEach((card, index) => {
