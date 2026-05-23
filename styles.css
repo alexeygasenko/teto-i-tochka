@@ -268,6 +268,12 @@ main {
   background: linear-gradient(135deg, rgba(255, 248, 232, 0.9), rgba(255, 194, 174, 0.72));
 }
 
+.bakery {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(244, 201, 79, 0.24), transparent 26%),
+    linear-gradient(135deg, rgba(255, 238, 205, 0.86), rgba(255, 248, 232, 0.82));
+}
+
 .visit-title span {
   display: block;
   width: max-content;
@@ -379,6 +385,11 @@ h2 {
 
 .combo-panel {
   --panel-a: #f14562;
+  --panel-b: #f4c94f;
+}
+
+.bakery-panel {
+  --panel-a: #ffe6bd;
   --panel-b: #f4c94f;
 }
 
@@ -1133,11 +1144,13 @@ body.modal-open {
   }
 
   .story .section-copy,
+  .bakery .section-copy,
   .visit .section-copy {
     order: 1;
   }
 
   .story .teto-panel,
+  .bakery .teto-panel,
   .visit .teto-panel {
     order: 2;
   }
